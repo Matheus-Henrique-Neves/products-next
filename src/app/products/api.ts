@@ -25,3 +25,9 @@ export async function createProduct(data: IProductRequest){
       
     
 }
+export async function getOneProductById(id:string):Promise<IProduct|null>{
+    const response = await fetch(url+'/'+id)
+    if(response.status != 200) return null
+    const json = await response.json()
+    return json
+}

@@ -1,13 +1,18 @@
 export interface IUser {
     id: number
     name: string
-    username: string
     email: string
-    address: IAddress
+
+   // address: IAddress
 }
 
-export interface IAddress {
+/*export interface IAddress {
     street: string
     city: string
     zipcode: string
+}*/
+export interface IUserRequest {
+    name: string
+    email: string
+    password: string
 }
